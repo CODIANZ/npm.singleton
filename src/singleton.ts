@@ -1,8 +1,8 @@
-export class Singleton<T>
+export class Singleton<CREATOR extends () => any>
 {
-  private m_fnGetInstance: () => T;
+  private m_fnGetInstance: () => ReturnType<CREATOR>;
   public get Instance() { return this.m_fnGetInstance(); }
-  public constructor(creator: () => T) {
+  public constructor(creator: CREATOR) {
     this.m_fnGetInstance = () => {
       const instance = creator();
       this.m_fnGetInstance = () => instance;
