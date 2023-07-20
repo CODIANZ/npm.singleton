@@ -1,6 +1,6 @@
 {
   "name": "@codianz/singleton",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "singleton with type.",
   "main": "./dist/index.js",
   "scripts": {
